@@ -43,8 +43,4 @@ const author = document.querySelector("#quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
-<<<<<<< HEAD
 author.innerText = todaysQuote.author;
-=======
-author.innerText = todaysQuote.author;
->>>>>>> 76f1951f65f4207cb335ec6a42fc1efc8e5cb1f3
