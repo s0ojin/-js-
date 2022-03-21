@@ -108,7 +108,8 @@ h2 {
 }
 
 #login {
-    display:inline-block;
+    /*display:inline-block; hidden클래스가 정상적으로 추가되는데 요소가 감춰지지 않았음 
+    -> id에 display설정이 우선되어 적용되지 않았던 것, div에 display 설정하였더니 정상작동*/
     width: 50vh;
     height: 6vh;
     padding: 1vh;
@@ -117,6 +118,9 @@ h2 {
     backdrop-filter: blur(10px);
 }
 
+div {
+    display: inline-block;
+}
 
 #login input[type=text] {
     transition: all 0.5s;
