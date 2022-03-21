@@ -1,7 +1,6 @@
 .hidden {
     display: none;
 }
-
 *{
     box-sizing: border-box;
     padding: 0;
@@ -11,6 +10,7 @@
 body {
     height: 100%;
     color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container {
@@ -48,13 +48,7 @@ img {
     background-repeat: no-repeat;
 }
 
-#login-form {
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
 #greeting {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 4.5vmin;
     font-style: italic;
     margin-top: 0px;
@@ -76,7 +70,6 @@ h2 {
 }
 
 #quote span:first-child {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3vmin;
     font-style: italic;
     transform: translateY(50%);
@@ -90,10 +83,8 @@ h2 {
 #quote span:first-child::before {content: '\201C';}
 #quote span:first-child::after {content: '\201D';} 
 
-
 #quote span:last-child {
     display:block;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2vmin;
     transform: translateY(-50%);
     opacity: 0;
@@ -111,5 +102,53 @@ h2 {
 #weather span:last-child {display:block;} 
 
 
+#login-form input {
+    width: 25vh;
+    height: 4vh;
+}
+
+#login {
+    display:inline-block;
+    width: 50vh;
+    height: 6vh;
+    padding: 1vh;
+    background-color: rgb(236 224 224 / 30%);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
 
 
+#login input[type=text] {
+    transition: all 0.5s;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+#login input[type=text]:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+    caret-color: white;
+}
+
+#login input::placeholder {
+    color: white;
+    font-style: italic;
+    font-size: 2.5vh;
+    text-align:justify;
+  }
+
+#login input[type="text"] {
+    color: white;
+    font-style: italic;
+    font-size: 2.5vh;
+    text-align:justify;
+  }
+
+#login button {
+    border-radius: 10px;
+    height: 4vh;
+    width: 7vh;
+    border: none;
+    background-color: white;
+}
