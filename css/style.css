@@ -139,14 +139,12 @@ div {
     color: white;
     font-style: italic;
     font-size: 2.5vh;
-    text-align:justify;
   }
 
 #login input[type="text"] {
     color: white;
     font-style: italic;
     font-size: 2.5vh;
-    text-align:justify;
   }
 
 #login button {
@@ -155,4 +153,104 @@ div {
     width: 7vh;
     border: none;
     background-color: white;
+}
+
+#todo-form {
+    display: inline-block;
+    width: 40vh;
+    height: 5vh;
+    padding: 1vh;
+    background-color: rgb(236 224 224 / 30%);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+#todo-form input {
+    border: none;
+    background-color: transparent;
+    width: 30vh;
+    top: 2px;
+    position: relative;
+}
+
+#todo-form input[type=text]:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+    caret-color: white;
+}
+
+#todo-form input::placeholder {
+    color: white;
+    font-style: italic;
+    font-size: 2vh;
+}
+
+#todo-form input[type="text"] {
+    color: white;
+    font-style: italic;
+    font-size: 2vh;
+}
+
+#todo-list {
+    margin-top: 2vh;
+}
+
+li {
+    padding: 0.5vh;
+    list-style-type: none;
+}
+
+.todo {
+    text-align: left;
+}
+
+.btn-check {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    top: 3.5px;
+}
+
+.btn-check::before {
+    content: "\1F90D";
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.checked .btn-check::after {
+    content: "\1F497";
+    font-size: 25px;
+    padding-right: 10px;
+    position: absolute;
+    left: 0px;
+}
+
+.checked span {position: relative;}
+.checked span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    border-top: solid 2px rgb(228, 98, 98);
+    width: 110%;
+}
+
+
+.btn-delete {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    font-size: 20px;
+    color: transparent;
+    padding-left: 8px;
+}
+
+li:hover .btn-delete {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    font-size: 20px;
+    color: rgb(228, 98, 98);
+    padding-left: 8px;
+    transition: all 1s;
 }

@@ -17,14 +17,25 @@ function deleteToDo(event) {
     saveToDos();
 }
 
+
+function checkToDo(event) {
+    const li = event.target.parentNode;
+    li.classList.toggle("checked");
+}
+
 function paintToDo(newTodo) {
+    const checkbox = document.createElement("button");
+    checkbox.classList.add("btn-check");
+    checkbox.addEventListener("click", checkToDo);
     const li = document.createElement("li");
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "✖️";
+    button.classList.add("btn-delete");
+    button.innerText = "x";
     button.addEventListener("click", deleteToDo);
+    li.appendChild(checkbox);
     li.appendChild(span);
     toDoList.appendChild(li);
     li.appendChild(button);
