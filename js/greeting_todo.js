@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const loginBox = document.querySelector("#login");
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
@@ -121,3 +122,6 @@ if(savedToDos !== null) {
     parsedToDos.forEach(paintToDo);
     toDos = parsedToDos;
 }
+=======
+
+>>>>>>> 6432d9ba3b06fffaccfdcbada79ba8da681315a7
