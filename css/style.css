@@ -1,6 +1,7 @@
 .hidden {
     display: none;
 }
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -115,7 +116,7 @@ h2 {
     padding: 1vh;
     background-color: rgb(236 224 224 / 30%);
     border-radius: 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
 div {
@@ -151,18 +152,19 @@ div {
     border-radius: 10px;
     height: 4vh;
     width: 7vh;
+    margin-left: 10px;
     border: none;
     background-color: white;
+    color: rgb(153, 153, 153);
 }
 
 #todo-form {
-    display: inline-block;
     width: 40vh;
     height: 5vh;
     padding: 1vh;
     background-color: rgb(236 224 224 / 30%);
     border-radius: 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
 #todo-form input {
@@ -253,4 +255,21 @@ li:hover .btn-delete {
     color: rgb(228, 98, 98);
     padding-left: 8px;
     transition: all 1s;
+}
+
+
+#logout {
+    position: absolute;
+    right: 2vh;
+    bottom: 2vh;
+    border: none;
+    background-color: transparent;
+    color: white;
+    opacity: 60%;
+    font-size: 16px;
+}
+
+#logout:hover {
+    transition: all 0.5s;
+    opacity: 100%;
 }
