@@ -2,6 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 const toDoInput = document.querySelector("#todo-form input");
 /* const toDoInput = toDoForm.querySelector("input") */
+const toDoClear = document.querySelector(".todo-clear");
 
 let toDos = [];
 const TODOS_KEY = "todos"
@@ -16,7 +17,6 @@ function deleteToDo(event) {
     li.remove();
     saveToDos();
 }
-
 
 function checkToDo(event) {
     const li = event.target.parentNode;
@@ -65,4 +65,10 @@ if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     parsedToDos.forEach(paintToDo);
     toDos = parsedToDos;
+} 
+
+function onClear() {
+    localStorage.removeItem("todos");
+    toDoList.remove();
 }
+toDoClear.addEventListener("click", onClear);

@@ -39,7 +39,7 @@ if (savedUsername === null) {
     paintGreetings(savedUsername);
 }
 
-function onLogout(event) {
+function onLogout() {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginBox.classList.remove(HIDDEN_CLASSNAME);
     greeting.classList.add(HIDDEN_CLASSNAME);
