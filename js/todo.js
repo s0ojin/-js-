@@ -16,6 +16,9 @@ function deleteToDo(event) {
     toDos = toDos.filter(todo => todo.id !== parseInt(li.id));
     li.remove();
     saveToDos();
+    if(toDos.length == 0) {
+        toDoClear.classList.add("hidden");
+    }
 }
 
 function checkToDo(event) {
@@ -35,6 +38,7 @@ function paintToDo(newTodo) {
     button.classList.add("btn-delete");
     button.innerText = "x";
     button.addEventListener("click", deleteToDo);
+    toDoClear.classList.remove("hidden");
     li.appendChild(checkbox);
     li.appendChild(span);
     toDoList.appendChild(li);
@@ -58,9 +62,7 @@ function handleToDoSubmit(event) {
 
 toDoForm.addEventListener("submit",handleToDoSubmit);
 
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
-
 if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     parsedToDos.forEach(paintToDo);
@@ -68,7 +70,10 @@ if(savedToDos !== null) {
 } 
 
 function onClear() {
-    localStorage.removeItem("todos");
-    toDoList.remove();
+    localStorage.removeItem(TODOS_KEY);
+    const li = document.querySelectorAll("ul > li");
+    li.forEach(element => element.remove());
+    toDoClear.classList.add("hidden");
 }
+
 toDoClear.addEventListener("click", onClear);

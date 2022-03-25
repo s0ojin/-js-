@@ -35,7 +35,8 @@ body {
     top: 20%;
 }
 
-img {
+/*src에 style적용이 안되어 배경화면이 찌그러졌던 것, class추가하여 수정*/
+.bgImage {
     position: absolute;
     top: 0;
     left: 0;
@@ -222,7 +223,7 @@ li {
     list-style-type: none;
 }
 
-.todo {
+.todo #todo-list {
     text-align: left;
 }
 
@@ -292,4 +293,12 @@ li:hover .btn-delete {
 #logout:hover {
     transition: all 0.5s;
     opacity: 100%;
+}
+
+.todo-clear {
+    color: rgb(228, 98, 98);
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    margin-top: 2vh;
 }
