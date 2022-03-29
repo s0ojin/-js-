@@ -113,7 +113,6 @@ h2 {
 }
 
 #weather span:nth-child(2) {
-    background-image: url(../img/clouds.png);
     color: transparent;
     width: 5vmin;
     background-size: auto 3vh;
@@ -122,6 +121,14 @@ h2 {
     position: relative;
     bottom: -0.6vh;
 }
+
+.Clear {background-image: url(../img/clear.png);}
+.Clouds {background-image: url(../img/clouds.png);}
+.Atmosphere {background-image: url(../img/atmosphere.png);}
+.Snow {background-image: url(../img/snow.png);}
+.Rain {background-image: url(../img/rain.png);}
+.Drizzle {background-image: url(../img/drizzle.png);}
+.Thunderstorm {background-image: url(../img/thunder.png);}
 
 
 #login-form input {

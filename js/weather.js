@@ -10,8 +10,17 @@ function onGeoOk(position) {
         const city = document.querySelector("#weather span:nth-child(3)");
         city.innerText = data.name;
         weather.innerText = data.weather[0].main;
-        weather.classList.add(data.weather[0].main);
+
+        if(data.weather[0].main == "Clear"||"Cloud"||"Rain"||"Snow"||"Drizzle"||"Thunderstorm") {
+            weather.classList.add(data.weather[0].main);
+        } else {
+            weather.classList.add("Atmosphere");
+        }
+
+        "Mist"||"Smoke"||"Haze"||"Dust"||"Fog"||"Sand"||"Ash"||"Squall"||"Tornado"
+
         temp.innerText= `${Math.round(data.main.temp)}º`;
+        console.dir(data);
     });
 }
 
